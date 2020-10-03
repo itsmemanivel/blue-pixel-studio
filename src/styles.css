@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+:root {
+    --primary-color: #0057E7;
+    --secondary-color: #FFD360;
+    --primary-font: 'Poppins';
+    --secondary-font: 'Roboto', sans-serif;
+    --red-border: 1px solid red;
+    --black-border: 1px solid black;
+}
+
+::selection {
+    color: var( --secondary-color);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+ul,
+li {
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 0 !important;
+}
+
+
+/* 
+@media only screen and (min-width: 600px) {
+    .mob {
+        display: none;
+    }
+} */

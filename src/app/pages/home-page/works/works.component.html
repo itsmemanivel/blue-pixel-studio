@@ -1,0 +1,93 @@
+<div id="works" class="works">
+
+    <!-- <div class="container-fluid">
+        <mat-tab-group>
+            <mat-tab label="Web Design">
+                <div class="cards">
+                    <div class="card"><img src="assets/images/Rectangle 13.png" alt="card-1"></div>
+                    <div class="card"><img src="assets/images/Rectangle 14.png" alt="card-1"></div>
+                    <div class="card"><img src="assets/images/Rectangle 15.png" alt="card-1"></div>
+
+                </div>
+                <div class="cards">
+                    <div class="card"><img src="assets/images/Rectangle 16.png" alt="card-1"></div>
+                    <div class="card"><img src="assets/images/Rectangle 17.png" alt="card-1"></div>
+                    <div class="card"><img src="assets/images/Rectangle 18.png" alt="card-1"></div>
+
+                </div>
+            </mat-tab>
+            <mat-tab label="UI/UX design"> Content 2 </mat-tab>
+            <mat-tab label="Illustration"> Content 3 </mat-tab>
+            <mat-tab label="Logo design"> Content 3 </mat-tab>
+            <mat-tab label="Graphic design"> Content 3 </mat-tab>
+
+        </mat-tab-group>
+    </div> -->
+
+    <div class="container-fluid">
+        <div class="tabs">
+
+            <div class=" container">
+                <ul class="des tabs-label" id="tabs-label">
+                    <li [ngClass]="{'active-tabs': selectedTab== 0}" id="lables" (click)="activeTabs(0)">Web Dev</li>
+                    <li [ngClass]="{'active-tabs': selectedTab== 1}" id="lables" (click)="activeTabs(1)">Illustration</li>
+                    <li [ngClass]="{'active-tabs': selectedTab== 2}" id="lables" (click)="activeTabs(2)">UI/UX Design</li>
+                    <li [ngClass]="{'active-tabs': selectedTab== 3}" id="lables" (click)="activeTabs(3)">Logo Design</li>
+                    <li [ngClass]="{'active-tabs': selectedTab== 4}" id="lables" (click)="activeTabs(4)">Graphic Design</li>
+
+
+                </ul>
+
+                <ul class="mob tabs-label" id="tabs-label">
+                    <li [ngClass]="{'active-tabs': selectedTab== 0}" id="lables" (click)="activeTabs(0)">Web </li>
+                    <li [ngClass]="{'active-tabs': selectedTab== 1}" id="lables" (click)="activeTabs(1)">Illustration</li>
+                    <li [ngClass]="{'active-tabs': selectedTab== 2}" id="lables" (click)="activeTabs(2)">UI/UX </li>
+                    <li [ngClass]="{'active-tabs': selectedTab== 3}" id="lables" (click)="activeTabs(3)">Logo </li>
+                    <li [ngClass]="{'active-tabs': selectedTab== 4}" id="lables" (click)="activeTabs(4)">Graphic </li>
+
+
+                </ul>
+            </div><br><br><br><br>
+            <div class="tabs-list">
+                <div class="left-arrow">
+                    <p (click)="onPrev()">
+                        <fa-icon [icon]="faChevronCircleLeft"></fa-icon>
+                    </p>
+                </div>
+                <div class="tabs-card">
+
+                    <div class="slide-wrapper">
+                        <div *ngIf="counter== 0">
+                            <app-web-dev-cards></app-web-dev-cards>
+                        </div>
+                        <div *ngIf="counter== 1">
+                            <app-ui-ux-cards></app-ui-ux-cards>
+                        </div>
+                        <div *ngIf="counter== 2">
+                            <app-illustration-cards></app-illustration-cards>
+                        </div>
+                        <div *ngIf="counter== 3">
+                            <app-logo-des-cards></app-logo-des-cards>
+                        </div>
+
+                        <div *ngIf="counter== 4">
+                            <app-graphic-des-cards></app-graphic-des-cards>
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="right-arrow">
+                    <p (click)="onNext()">
+                        <fa-icon [icon]="faChevronCircleRight"></fa-icon>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

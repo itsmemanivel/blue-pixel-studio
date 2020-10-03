@@ -1,0 +1,59 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #snav mode="over" position="end">
+        <div class="close">
+            <fa-icon (click)="snav.toggle()" [icon]="faTimes"></fa-icon>
+        </div><br><br><br>
+        <div class="side-content">
+            <ul>
+                <li (click)="onClick('home')">Home</li>
+                <li (click)="onClick('works')">Works</li>
+                <li (click)="onClick('about')">AboutUs</li>
+                <li (click)="onClick('contact')">Contact</li>
+                <li (click)="onClick('contact')">Social</li>
+            </ul>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <nav>
+            <ul (click)="onClick('home')" class="logo">
+                <li>
+                    <img src="assets/images/logo-2.png" alt="logo">
+
+                    <span>Blue Pixel </span><span>Studio</span>
+                </li>
+            </ul>
+            <div class="des menus">
+                <ul>
+                    <li (click)="onClick('home')">Home</li>
+                    <li (click)="onClick('works')">Works</li>
+                    <li (click)="onClick('about')">AboutUs</li>
+                    <li (click)="onClick('contact')">Contact</li>
+                    <li (click)="onClick('contact')">Social</li>
+
+                </ul>
+            </div>
+            <div (click)="snav.toggle()" class=" mob menus ">
+                <div class="bars ">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+
+
+        </nav>
+
+
+        <app-banner></app-banner>
+        <app-works></app-works><br><br>
+        <app-about-us></app-about-us>
+        <app-contact></app-contact><br><br>
+        <footer>
+            <div class="cta ">
+                <p>powered by blue pixel studio </p> <img src="assets/icons/ant-design_thunderbolt-twotone.png " alt="cta ">
+            </div>
+        </footer>
+    </mat-sidenav-content>
+</mat-sidenav-container>
